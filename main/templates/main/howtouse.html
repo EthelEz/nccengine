@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>Page Title</title>
+</head>
+<body>
+    <div class="container">
+        <h3 class="d-flex justify-content-center"></h3> <br>
+        <div class="container"><br>
+            <nav class="navbar navbar-expand-sm bg-light navbar-dark"><br><br>
+                <h3 class="d-flex justify-content-center">The spectrum prediction tutorial</h3><br>
+            </nav>
+        </div>
+        <div class="container"> <br><br>
+            <h4>This is the training tutorial on how to use the AI Spectrum prediction Engine<h4><br><br>
+            <div class="container">
+                <p>First, use the machine learning engine <a href="#index2">here</a> to train your data</p>
+            </div>
+            <div class="container">
+                <p>Secondly, save your model as described</p>
+            </div>
+            <div class="container">
+                <p>Finally, fill in the <a href="http://127.0.0.1:8000/index2">form</a> to perform prediction</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+{% extends 'main/header.html' %}
+    {% block title %}Prediction{% endblock %}
+
+    {% block content %}
+{% load static %}
+<!-- Slide 2 (#55) -->
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <div class="container">
+            <h3 class="d-flex justify-content-center"></h3> <br>
+            
+                    <h3 class="d-flex justify-content-center">The spectrum prediction tutorial</h3><br>
+              
+            <div class="container"><br>
+                
+            </div>
+            <div class="container"> <br><br>
+                <h4>This is the training tutorial on how to use the AI Spectrum prediction Engine<h4><br><br>
+                <div class="container">
+                    <p>First, use the machine learning engine <a href="/trainml">here</a> to train your data</p>
+                </div>
+                <div class="container">
+                    <p>Secondly, save your model as described</p>
+                </div>
+                <div class="container">
+                    <p>Finally, fill in the <a href="/index2">form</a> to perform prediction</p>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>  
+  <!-- <div class="background" style="background-image:url(assets/img/background/img-55.jpg)"></div> -->
+  <div class="background" style="background-image:url({% static 'main/assets/img/background/img-55.jpg' %})"></div>
+
+</section>
+{% endblock %}

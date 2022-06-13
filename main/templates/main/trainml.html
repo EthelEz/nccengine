@@ -1,0 +1,37 @@
+{% extends 'main/header.html' %}
+    {% block title %}Prediction{% endblock %}
+
+    {% block content %}
+{% load static %}
+<!-- Slide 2 (#55) -->
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <h1> Dataract</h1>
+        <p>Welcome to Dataract, a website developed for <em>training machine learning models using your own data!</em></p>
+        <h2>Our Stats</h2>
+        <p>Below are some of our stats:</p>
+        <ul>
+          <li><strong>Datasets uploaded:</strong> {{ num_dataset }}</li>
+          <li><strong>Trained ML models:</strong> {{ num_ml_models }}</li>
+        </ul>
+        <h2>Process your data</h2>
+        <p>Upload data file below to train a machine learning model:</p>
+        <form name = "dset_upld_form" enctype = "multipart/form-data" action="{% url 'upload' %}" method="post">
+           {% csrf_token %}
+           <table>
+              {{ form.as_table }}
+           </table>
+           <input type="submit" value="Submit">
+        </form>
+        
+      </div>
+    </div>
+  </div>  
+  <!-- <div class="background" style="background-image:url(assets/img/background/img-55.jpg)"></div> -->
+  <div class="background" style="background-image:url({% static 'main/assets/img/background/img-55.jpg' %})"></div>
+
+</section>
+{% endblock %}
